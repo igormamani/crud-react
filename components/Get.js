@@ -76,7 +76,7 @@ class HomeScreen extends Component {
         this.state = {
           tableHead: ['Número Beneficario', 'Nome','Endereço', 'Telefone', 'Doenças Prévias','Uso Continuo'],
           tableData: [
-            ['', '', '', '','',''],
+            ['9', 'hgfj', 'ooo', 'gh45','nsao','si,'],
             ['', '', '', '','',''],
             ['', '', '', '','',''],
             ['', '', '', '','',''],
@@ -248,6 +248,7 @@ function DeletarScreen() {
       const [text, setText] = React.useState("");
       return (
         <View style={styles.inputContainer}>
+        <View style={styles.inputforms}>
         <TextInput
           mode="outlined"
           label="Número Beneficario"
@@ -255,6 +256,13 @@ function DeletarScreen() {
           value={text}
           underlineColor="transparent"
         />
+        </View>
+        <Button style={{width:'80%',marginLeft:'10%' }}
+              icon="delete"
+              mode="contained"
+              onPress={() => console.log('Clicado')}>
+        Excluir
+      </Button>
         </View>
       );
     }
